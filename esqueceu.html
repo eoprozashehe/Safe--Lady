@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="esqueci.css">
+    <link rel="stylesheet" href="tipos.css">
+</head>
+<body>
+    <header>
+        <h1>Redefinir Senha</h1>
+    </header>
+    <main>
+        <section id="reset-password">
+            <h2>Esqueceu sua senha?</h2>
+            <p>Não se preocupe! Informe seu e-mail abaixo e enviaremos um link para redefinir sua senha.</p>
+            <form action="/reset-password" method="post">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="button" class="btn" onclick="index()">Enviar</button>
+
+                
+            </form>
+            <p>Já lembrou sua senha? <a href="Index.html">Faça login</a></p>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

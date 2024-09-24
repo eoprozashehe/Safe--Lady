@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações sobre a Assistência</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ccc 1px solid;
+        }
+        header h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .review {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .review h2 {
+            margin: 0 0 10px;
+        }
+        .review p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Avaliações sobre a Assistência</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="reviews">
+            <div class="review">
+                <h2>Maria Silva</h2>
+                <p>“A assistência oferecida foi excelente. Os profissionais foram atenciosos e me ajudaram a superar momentos difíceis. Agradeço muito pelo suporte.”</p>
+            </div>
+
+            <div class="review">
+                <h2>Joana Santos</h2>
+                <p>“O atendimento foi satisfatório, mas acredito que poderia haver mais atividades de conscientização para toda a comunidade escolar.”</p>
+            </div>
+
+            <div class="review">
+                <h2>Ana Oliveira</h2>
+                <p>“Recebi o apoio necessário e me senti muito segura durante o processo. A equipe foi muito profissional e dedicada.”</p>
+            </div>
+
+            <!-- Adicione mais avaliações aqui -->
+        </section>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Avaliação e Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .btn {
+            background: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #555;
+        }
+        .feedback-section {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+        </form>
+
+        <div class="feedback-section">
+            <h2>Deixe seu Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="feedbackName">Nome:</label>
+                    <input type="text" id="feedbackName" name="feedbackName" required>
+                    <div class="error" id="feedbackNameError"></div>
+                </div>
+                <div class="form-group">
+                    
+                 
+                    <div class="error" id="feedbackEmailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="feedbackMessage">Mensagem:</label>
+                    <textarea id="feedbackMessage" name="feedbackMessage" rows="5" required></textarea>
+                    <div class="error" id="feedbackMessageError"></div>
+                   
+                    <button type="button" class="btn" onclick="register()">Enviar</button>
+                </div>
+                <script src="validation.js"></script>
+    </div>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+            
+            // Limpar mensagens de erro
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('reviewError').innerText = '';
+
+            // Obter valores dos campos
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const review = document.getElementById('review').value.trim();
+
+            // Validar campos
+            if (name === '') {
+                document.getElementById('nameError').innerText = 'O nome é obrigatório.';
+                isValid = false;
+            }
+            if (email === '') {
+                document.getElementById('emailError').innerText = 'O e-mail é obrigatório.';
+                isValid = false;
+            }
+            if (review === '') {
+                document.getElementById('reviewError').innerText = 'A avaliação é obrigatória.';
+                isValid = false;
+            }
+
+            // Se todos os campos forem válidos, enviar o formulário
+            if (isValid) {
+                document.getElementById('evaluationForm').submit(); // Submete o formulário de avaliação
+            }
+        }
+
+        function validateFeedback() {
+            let isValid = true;
+            
+            // Limpar mensagens de erro
+            document.getElementById('feedbackNameError').innerText = '';
+            document.getElementById('feedbackEmailError').innerText = '';
+            document.getElementById('feedbackMessageError').innerText = '';
+
+            // Obter valores dos campos
+            const feedbackName = document.getElementById('feedbackName').value.trim();
+            const feedbackEmail = document.getElementById('feedbackEmail').value.trim();
+            const feedbackMessage = document.getElementById('feedbackMessage').value.trim();
+
+            // Validar campos
+            if (feedbackName === '') {
+                document.getElementById('feedbackNameError').innerText = 'O nome é obrigatório.';
+                isValid = false;
+            }
+            if (feedbackEmail === '') {
+                document.getElementById('feedbackEmailError').innerText = 'O e-mail é obrigatório.';
+                isValid = false;
+            }
+            if (feedbackMessage === '') {
+                document.getElementById('feedbackMessageError').innerText = 'A mensagem é obrigatória.';
+                isValid = false;
+            }
+
+            // Se todos os campos forem válidos, enviar o formulário
+            if (isValid) {
+                document.getElementById('feedbackForm').submit(); // Submete o formulário de feedback
+            }
+        }
+    </script>
+</body>
+</html>

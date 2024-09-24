@@ -1,0 +1,60 @@
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#reset-password {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#reset-password h2 {
+    color: #d41f3d;
+    margin-top: 0;
+}
+
+#reset-password p {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #da1b5a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #df1b35;
+}
+
+footer {
+    background: firebrick
+}

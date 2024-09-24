@@ -1,0 +1,21 @@
+input[type="file"]{
+    display: none;
+   
+
+}
+.label{
+    padding: 20px 10px;
+    width: 200px;
+    background-color:rgba(228, 34, 67, 0.877);
+    color: #b19393;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+form:houver {
+color: #000;
+background: #fff;
+}
